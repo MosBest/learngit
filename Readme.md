@@ -46,7 +46,7 @@
  
 
 ## 4.从远程库克隆 
-* 最好的方式是先创建远程库，然后，从远程库克隆。首先，登陆GitHub，创建一个新的仓库，名字叫gitskills，我们勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。
+* 最好的方式是先创建远程库，然后，从远程库克隆。首先，登陆GitHub，创建一个新的仓库，名字叫gitskills，我们勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件
 * 从远程库中克隆到本地库
      
 ``$ git clone git@github.com:michaelliao/gitskills.git`` 
