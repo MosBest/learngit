@@ -17,43 +17,45 @@
  
  * 安装完成后，在jit bush中敲
   
-    * ``$ git config --global user.name "Your Name"``
+    * ``$ git config --global user.name "github用户名"``
 
-    *  ``$ git config --global user.email "email@example.com"``
-   
-## 2.创建版本库
- * 选择一个合适的地方，创建一个空目录
-   * ``$ mkdir learngit``
-   * ``$ cd learngit``
-   * ``$ pwd``
- 
- * 通过git init命令把这个目录变成Git可以管理的仓库
-   ``git init``
- 
- *`` $ git add readme.txt``
-
- *``$ git commit -m "-m表示你要在此处添加对文件的描述信息"``
-
-## 3. 远程仓库
-  * 创建SSH Key,第一次用的时候使用
-    * 关联远程库
+    *  ``$ git config --global user.email "github邮箱"``
     
-    ``*$ ssh-keygen -t rsa -C "youremail@example.com"`` 
- 
- * ``$ git remote add origin git@github.com:michaelliao/learngit.git``
- * ``$ git push -u origin master``
- * ``$ git push origin master``
- 
+    *  ``$ ssh-keygen -t rsa -C "github邮箱"   //生成ssh key"``
+    
+    一直按回车，直到结束
+    
+    *  在上面输出内容中可以找到id_rsa.pub的路径,打开id_rsa.pub(打开记事本直接拖入),全文复制
+    
+    * 打开网页github，现则settings / ssh and GPG keys
+    
+        title ：随便起
+
+        key：将刚刚从id_rsa.pub 复制得内容完全粘贴
+    
+    * 测试git 是否连接成功github
+        
+        ssh git@github.com
+       
+        若出现 Hi MosBest! You've successfully authenticated, but GitHub does not provide shell access.表明连接成功
+    
+    
+    
+  
 
 ## 4.从远程库克隆 
 * 最好的方式是先创建远程库，然后，从远程库克隆。首先，登陆GitHub，创建一个新的仓库，名字叫gitskills，我们勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件
 * 从远程库中克隆到本地库
      
-``$ git clone git@github.com:michaelliao/gitskills.git`` 
+* ``$ git clone git@github.com:michaelliao/gitskills.git`` 
 
-        
+* `` $ git add readme.txt``
 
+* ``$ git commit -m "-m表示你要在此处添加对文件的描述信息"``
 
+* 第一次用 ``$ git push -u origin master`` ， 以后用``$ git push origin master``      
+
+*  可能还要有``$ git remote add origin git@github.com:michaelliao/learngit.git``
 
  
     
