@@ -57,6 +57,27 @@
 
 *  可能还要有``$ git remote add origin git@github.com:michaelliao/learngit.git``
 
+
+
+# 问题解决
+## 当一不小心git太大的文件，导致git push origin master 耗时，且可能出错，怎么办？
+解决办法：[github删除错误的commit并保留之前的提交。](https://blog.csdn.net/qinglingls/article/details/80599780)
+
+注意：这样做是十分危险的，这样操作之后，自己电脑本地的代码都会回滚，　记得一定提前保存原代码
+
+简单来说就是：
+
+    1. cp -r nlp_study/ nlp_study_copy_
+    2. cd nlp_study_
+    3．git log　：获取提交的历史找到需要回滚到的提交点 ，可以看到我们之前提交的commit id 
+    4．复制你需要回滚的id ，输入复制hash值，使用git reset --hard commit_id （两个-)
+    5. 观察文件，发现文件夹回滚到以前的情况了。
+    
+
+注意：这样做是十分危险的，这样操作之后，自己电脑本地的代码都会回滚，　记得一定提前保存原代码
+
+
+
  
     
     
